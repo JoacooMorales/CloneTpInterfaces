@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- El overlay se posiciona dentro del container -->
+            <div class="overlay"></div>
+            <div class="form-content">
+                <div class="form-login">
+                    <form id="loginForm">
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Iniciar sesión</button>
+                        <button type="button" id="goToRegister">Registrar</button>
+                    </form>
+                </div>
+                <div class="form-register">
+                    <form id="registerForm">
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="text" placeholder="Apellido" required>
+                        <input type="text" placeholder="Nickname (opcional)">
+                        <input type="number" placeholder="Edad" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <input type="password" placeholder="Confirmar Contraseña" required>
+                        <div class="captcha">
+                            <input type="checkbox" id="captchaCheckbox">
+                            <label for="captchaCheckbox">No soy un robot</label>
+                        </div>
+                        <button type="submit">Registrar</button>
+                        <button type="button" id="goToLogin">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
