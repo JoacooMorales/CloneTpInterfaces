@@ -1,7 +1,7 @@
 document.getElementById('goToRegister').addEventListener('click', () => {
-    document.querySelector('.form-content').style.transform = 'translateX(-50%)';
+    document.querySelector('.imagen-form').style.transform = 'translateX(-100%)';
 });
 
 document.getElementById('goToLogin').addEventListener('click', () => {
-    document.querySelector('.form-content').style.transform = 'translateX(0%)';
+    document.querySelector('.imagen-form').style.transform = 'translateX(0%)';
 });
