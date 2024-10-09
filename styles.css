@@ -13,23 +13,30 @@ body, html {
     height: 600px;
     background-color: #2E92FF;
     display: flex;
+    
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
 }
 
 
 
 .form-content {
     display: flex;
-
 }
 
 
+
 .form-login , .form-register {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
 }
+
+
+
+
+
 
 
 .imagen-form {
@@ -37,8 +44,9 @@ body, html {
     width: 400px; 
     height: 600px; 
     transition: transform 0.6s ease-in-out; 
+    border-radius: 10px;
     /*opacity: .8;  esto hace la opacidad del 80% como figma pero se trasluce el form*/
-
+    z-index: 2;
 }
 
 .form-content h2 {
@@ -80,18 +88,46 @@ button {
     border-radius: 30px;
     margin-top: 10px;
     cursor: pointer;
+    position: relative; /* Necesario para posicionar el pseudo-elemento relativo al botón */
+    overflow: hidden;   /* Para ocultar la línea cuando no esté visible */
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 400%; 
+    left: -100%; 
+    width: 300%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(17, 236, 225, 0.5), rgba(25, 26, 25, 0)); 
+    transform: rotate(45deg);
+    transition: all 0.25s ease; 
+    z-index: 1;
+}
+
+button:hover::before {
+    top: 0;
+    left: 0;
+    transition: all 0.25s ease; 
 }
 
 button:hover {
-    background-color: #003A72;
+    background-color: #003366; 
 }
 
+
+
 .captcha {
+    background-color:#f9f9f9;
+    border:2px solid #d3d3d3;
+	color:#4c4a4b;
+    height: 60px;
     display: flex;
     align-items: center;
-    margin-top: 15px;
     justify-content: center;
-
+    border-radius: 5px;
+    width: 50%; /* Ajusta el captcha al ancho completo del formulario */
+    margin: 15px auto 0 auto; 
 }
 
 .captcha input[type="checkbox"] {
@@ -100,8 +136,6 @@ button:hover {
     margin-right: 10px;
     background-color: #F7F7F7;
     border: 2px solid #0063CE;
+    cursor: pointer;
 }
 
-.captcha label {
-    color: #F7F7F7;
-}

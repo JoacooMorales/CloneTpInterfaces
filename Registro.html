@@ -13,11 +13,10 @@
 
 <body>
     <div class="container">
-        
-        <div class="overlay"></div>
+
         <div class="form-content">
             <div class="form-login">
-                <form id="loginForm">
+                <form class="formulario" id="loginForm">
                     <label for="email">Email</label>
                     <input type="email" required>
 
@@ -25,19 +24,30 @@
                     <input type="password" required>
 
                     <button type="submit">INICIAR SESION</button>
+
                     <div class="captcha">
-                        <input type="checkbox" id="captchaCheckbox">
-                        <label for="captchaCheckbox">No soy un robot</label>
+
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <div class="text">
+                            I'm not a robot
+                        </div>
+
+
                     </div>
-                    
+
                 </form>
+
 
                 <h2> ¿No tienes cuenta ? <span class="registrate" id="goToRegister">Registrate</span> </h2>
             </div>
             <div class="form-register">
                 <img src="image.png" alt="fondo-login" class="imagen-form ">
 
-                <form id="registerForm">
+                <form class="formulario" id="registerForm">
                     <label for="nombre">Nombre</label>
                     <input type="text" required>
                     <label for="apellido">Apellido</label>
@@ -55,18 +65,29 @@
                     <button type="submit">REGISTRAR</button>
 
                     <div class="captcha">
-                        <input type="checkbox" id="captchaCheckbox">
-                        <label for="captchaCheckbox">No soy un robot</label>
+
+                        <div class="spinner">
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                        <div class="text">
+                            I'm not a robot
+                        </div>
+
+
                     </div>
-                    
+
                     <h2> ¿Ya tienes cuenta? <span class="iniciar-sesion" id="goToLogin">Iniciar sesion</span> </h2>
                 </form>
 
             </div>
-            
+
         </div>
-        
-        
+
+
     </div>
 
     <script src="script.js"></script>
